@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <style>
+    .container{
+      border:1px solid black;
+      margin:20px auto;
+      text-align:center;
+      height:100vh;
+      width:100%;
+      background-image: linear-gradient(to right, #434343 0%, black 100%); 
+      position:fixed;
+    }
+    h1{
+      color:white;
+    }
+    input{
+      border:none;
+      width:200px;
+      background:transparent;
+      padding-top:10px;
+      color:orange;
+     
+    }
+    #login{
+      color:orange;
+    
+      cursor:pointer;
+      width:200px;
+      padding:10px;
+      font-size:20px;
+    }
+ 
+  </style>
+  <body>
+    <div class="container">
+      <h1>Please login</h1>
+      <img src='/static/logo.png' width='300px'>
+      <br>
+      <form action="#" method="post">
+        <input type="text" placeholder="Username" name="username" required value="{{
+          request.form.username }}"><br>
+          <br>
+         <input type="password" placeholder="Password" name="password"  required value="{{
+          request.form.password }}"><br>
+          <br>
+      <input id="login" class="btn btn-default" type="submit" value="Login">
+        
+      </form>
+    
+    </div>
+  </body>
+</html>
